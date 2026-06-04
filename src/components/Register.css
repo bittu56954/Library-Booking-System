@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-title h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.register-title p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+}
+
+/* Button */
+.register-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 25px 0;
+  position: relative;
+}
+
+.divider span {
+  background: white;
+  padding: 0 15px;
+  color: #777;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  top: 50%;
+  left: 0;
+}
+
+/* Login Link */
+.register-link {
+  text-align: center;
+  color: #555;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Tablet Responsive
+========================= */
+@media (max-width: 768px) {
+  .register-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .register-title h1 {
+    font-size: 1.7rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+@media (max-width: 480px) {
+  .register-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .register-title h1 {
+    font-size: 1.4rem;
+  }
+
+  .register-title p {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .register-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .register-link {
+    font-size: 14px;
+  }
+}

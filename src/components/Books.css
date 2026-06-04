@@ -1,0 +1,255 @@
+
+.lms-main-wrapper {
+  max-width: 1250px;
+  margin: 30px auto;
+  padding: 0 25px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #2d3748;
+}
+
+
+.lms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.lms-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #1a202c;
+}
+
+.lms-header p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+
+.lms-control-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #f7fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 35px;
+}
+
+.search-box-wrapper {
+  position: relative;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+.lms-search-input {
+  width: 100%;
+  padding: 10px 15px 10px 42px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.lms-search-input:focus {
+  border-color: #0b0edb;
+}
+
+.filter-group {
+  display: flex;
+  gap: 12px;
+}
+
+.lms-dropdown {
+  padding: 0 15px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  background-color: white;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.lms-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+
+.lms-premium-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lms-premium-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+.lms-image-holder {
+  position: relative;
+  height: 290px;
+  background-color: #edf2f7;
+}
+
+.lms-actual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.lms-badge-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 30px;
+  color: white;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.lms-badge-tag.available { background-color: #10b981; }
+.lms-badge-tag.borrowed { background-color: #ef4444; }
+
+
+.lms-content-holder {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.lms-category-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0b0edb;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.lms-book-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 6px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lms-book-author {
+  font-size: 13px;
+  color: #4a5568;
+  margin: 0;
+}
+
+.lms-footer-info {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.lms-id-badge {
+  font-size: 11px;
+  color: #718096;
+  background-color: #edf2f7;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.lms-actions-bar {
+  padding: 0 20px 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 12px;
+}
+
+.lms-primary-btn, .lms-secondary-btn {
+  border: none;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.lms-primary-btn {
+  background-color: #0b0edb;
+  color: white;
+}
+
+.lms-primary-btn:hover:not(:disabled) {
+  background-color: #080aa6;
+}
+
+.lms-primary-btn:disabled {
+  background-color: #e2e8f0;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.lms-secondary-btn {
+  background-color: #ffffff;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+
+.lms-secondary-btn:hover {
+  background-color: #f7fafc;
+  border-color: #a0aec0;
+}
+
+
+@media (max-width: 768px) {
+  .lms-control-bar {
+    flex-direction: column;
+  }
+  .search-box-wrapper {
+    max-width: 100%;
+  }
+  .filter-group {
+    width: 100%;
+  }
+  .lms-dropdown {
+    flex-grow: 1;
+    padding: 10px;
+  }
+  .lms-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .add-btn-admin {
+    width: 100%;
+  }
+}
