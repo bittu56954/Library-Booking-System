@@ -77,7 +77,6 @@ Register Account
 
 </div>
 
-
     </div>
   )
 }
